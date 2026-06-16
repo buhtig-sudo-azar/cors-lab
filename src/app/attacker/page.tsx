@@ -361,9 +361,9 @@ export default function AttackerPage() {
           <CardContent className="px-4 sm:px-6 pb-4 sm:pb-6 space-y-1.5">
             {[
               { url: "https://portswigger.net/web-security/cors", label: "PortSwigger: Уязвимости CORS (бесплатный курс)" },
-              { url: "https://developer.mozilla.org/ru/docs/Web/HTTP/CORS", label: "MDN: CORS — подробно на русском" },
+              { url: "https://developer.mozilla.org/ru/docs/Web/HTTP/Guides/CORS", label: "MDN: CORS — подробно на русском" },
               { url: "https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny", label: "OWASP: Как работают атаки через CORS" },
-              { url: "https://cheatsheetseries.owasp.org/cheatsheets/CORS_Cheat_Sheet.html", label: "OWASP: Шпаргалка по настройке CORS" },
+              { url: "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html", label: "OWASP: Шпаргалка по безопасности REST API" },
             ].map((link, i) => (
               <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[11px] sm:text-sm text-primary hover:underline">
                 <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5 flex-shrink-0" />

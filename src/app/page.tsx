@@ -870,9 +870,8 @@ export default function LabPage() {
               <h3 className="font-semibold text-xs sm:text-sm mb-2 flex items-center gap-2"><Globe className="h-4 w-4 text-blue-500" /> Официальная документация</h3>
               <div className="space-y-1.5 sm:space-y-2">
                 {[
-                  { url: "https://developer.mozilla.org/ru/docs/Web/HTTP/CORS", label: "MDN: CORS — подробно на русском" },
+                  { url: "https://developer.mozilla.org/ru/docs/Web/HTTP/Guides/CORS", label: "MDN: CORS — подробно на русском" },
                   { url: "https://fetch.spec.whatwg.org/#cors-protocol", label: "Fetch Living Standard — спецификация CORS" },
-                  { url: "https://www.w3.org/TR/cors/", label: "W3C CORS Specification — официальный стандарт" },
                 ].map((link, i) => (
                   <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[11px] sm:text-sm text-primary hover:underline group">
                     <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5 flex-shrink-0" />
@@ -890,7 +889,7 @@ export default function LabPage() {
                   { url: "https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny", label: "OWASP: Атаки через CORS" },
                   { url: "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/", label: "OWASP Top-10: Неверная конфигурация безопасности" },
                   { url: "https://portswigger.net/web-security/cors", label: "PortSwigger: Уязвимости CORS (бесплатный курс)" },
-                  { url: "https://cheatsheetseries.owasp.org/cheatsheets/CORS_Cheat_Sheet.html", label: "OWASP: Шпаргалка по настройке CORS" },
+                  { url: "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html", label: "OWASP: Шпаргалка по безопасности REST API" },
                 ].map((link, i) => (
                   <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[11px] sm:text-sm text-primary hover:underline group">
                     <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5 flex-shrink-0" />
@@ -905,9 +904,9 @@ export default function LabPage() {
               <h3 className="font-semibold text-xs sm:text-sm mb-2 flex items-center gap-2"><BookOpen className="h-4 w-4 text-amber-500" /> Книги и курсы</h3>
               <div className="space-y-1.5 sm:space-y-2">
                 {[
-                  { url: "https://www.oreilly.com/library/view/the-web-application/9781119648039/", label: "The Web Application Hacker's Handbook" },
-                  { url: "https://www.oreilly.com/library/view/web-security-for/9781492038624/", label: "Web Security for Developers" },
-                  { url: "https://portswigger.net/web-security", label: "PortSwigger Web Security Academy (бесплатно)" },
+                  { url: "https://portswigger.net/web-security", label: "PortSwigger Web Security Academy — бесплатная обучающая платформа" },
+                  { url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS", label: "MDN: CORS — полная документация на английском" },
+                  { url: "https://cors-error.dev/", label: "CORS Error — справочник ошибок и способы их решения" },
                 ].map((link, i) => (
                   <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[11px] sm:text-sm text-primary hover:underline group">
                     <ExternalLink className="h-3 w-3 sm:h-3.5 sm:w-3.5 flex-shrink-0" />
