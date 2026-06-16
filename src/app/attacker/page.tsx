@@ -13,7 +13,7 @@ import {
   Terminal,
   Moon,
   Sun,
-  ChevronDown,
+  ArrowUp,
   KeyRound,
   Code2,
   ExternalLink,
@@ -44,22 +44,21 @@ interface CorsInfo {
 }
 interface AccountResponse { data: AccountData | null; cors: CorsInfo; }
 
-function ScrollDownButton() {
-  const [visible, setVisible] = useState(true);
+function ScrollToTopButton() {
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
-    const onScroll = () => setVisible(window.innerHeight + window.scrollY < document.body.scrollHeight - 100);
+    const onScroll = () => setVisible(window.scrollY > 300);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   if (!visible) return null;
   return (
     <button
-      onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2.5 sm:py-3 rounded-full bg-red-700 text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
-      aria-label="Прокрутить вниз"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-11 h-11 rounded-full bg-red-700/70 text-white shadow-lg hover:bg-red-700/90 transition-all hover:scale-110 backdrop-blur-sm"
+      aria-label="Наверх"
     >
-      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5" />
-      <span className="text-xs sm:text-sm font-medium">Вниз</span>
+      <ArrowUp className="h-5 w-5" />
     </button>
   );
 }
@@ -335,7 +334,7 @@ export default function AttackerPage() {
         </div>
       </footer>
 
-      <ScrollDownButton />
+      <ScrollToTopButton />
     </div>
   );
 }
