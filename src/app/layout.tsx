@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Учебный стенд по информационной безопасности. Демонстрация уязвимости CORS при использовании базовой рефлексии источника.",
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.png",
   },
 };
 
